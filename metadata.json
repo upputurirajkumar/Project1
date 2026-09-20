@@ -1,0 +1,6 @@
+{
+  "name": "No-Churn Telecom V2",
+  "description": "An end-to-end telecom churn machine learning project transforming customer data into risk intelligence and retention priorities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

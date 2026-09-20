@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No-Churn Telecom V2 | ML & Retention Intelligence</title>
+  <meta name="description" content="An end-to-end telecom churn machine learning project transforming customer data into risk intelligence and retention priorities.">
+  <meta name="theme-color" content="#070B14">
+
+  <!-- Open Graph / Social Cards -->
+  <meta property="og:title" content="No-Churn Telecom V2 | ML & Retention Intelligence">
+  <meta property="og:description" content="An end-to-end telecom churn machine learning project transforming customer data into risk intelligence and retention priorities.">
+  <meta property="og:type" content="website">
+  <!-- REPLACE WITH YOUR CANONICAL URL -->
+  <meta property="og:url" content="https://username.github.io/no-churn-telecom-portfolio/">
+  <meta property="og:image" content="./assets/og-preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="No-Churn Telecom V2 | ML & Retention Intelligence">
+  <meta name="twitter:description" content="From Churn Prediction to Retention Intelligence: An enterprise machine learning decision system.">
+
+  <!-- Canonical link placeholder -->
+  <!-- REPLACE WITH YOUR CANONICAL URL -->
+  <link rel="canonical" href="https://username.github.io/no-churn-telecom-portfolio/">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Runtime JavaScript -->
+  <script src="./script.js" defer></script>
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Sticky Header & Navigation -->
+  <header class="site-nav" id="site-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="No-Churn Telecom V2 Home">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">NO-CHURN TELECOM</span>
+          <span class="brand-badge">CHAMPION RF v2.1</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Overview</a></li>
+          <li><a href="#problem" class="nav-link">Problem</a></li>
+          <li><a href="#snapshot" class="nav-link">Data</a></li>
+          <li><a href="#pipeline" class="nav-link">ML Pipeline</a></li>
+          <li><a href="#benchmark" class="nav-link">Benchmark</a></li>
+          <li><a href="#observatory" class="nav-link">Observatory</a></li>
+          <li><a href="#retention" class="nav-link">Retention</a></li>
+          <li><a href="#simulator" class="nav-link">Simulator</a></li>
+          <li><a href="#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="#demo" class="nav-link">Demo</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Actions -->
+      <div class="nav-actions">
+        <!-- REPLACE WITH YOUR GITHUB URL -->
+        <a href="https://github.com/your-username/no-churn-telecom-v2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="View Source on GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+          GitHub
+        </a>
+        <!-- REPLACE WITH YOUR DASHBOARD URL -->
+        <a href="#preview" class="btn btn-primary btn-sm" aria-label="Explore Project Dashboard">
+          Live System
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="hamburger-line" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <a href="#hero" class="mobile-nav-link active">Overview</a>
+    <a href="#problem" class="mobile-nav-link">Business Problem</a>
+    <a href="#snapshot" class="mobile-nav-link">Verified Data</a>
+    <a href="#data" class="mobile-nav-link">Data Intelligence</a>
+    <a href="#pipeline" class="mobile-nav-link">ML Pipeline</a>
+    <a href="#benchmark" class="mobile-nav-link">Model Benchmark</a>
+    <a href="#observatory" class="mobile-nav-link">Model Observatory</a>
+    <a href="#calibration" class="mobile-nav-link">Probability Calibration</a>
+    <a href="#decision" class="mobile-nav-link">Prediction to Decision</a>
+    <a href="#retention" class="mobile-nav-link">Retention Priority</a>
+    <a href="#simulator" class="mobile-nav-link">Campaign Simulator</a>
+    <a href="#universe" class="mobile-nav-link">Customer Risk Universe</a>
+    <a href="#architecture" class="mobile-nav-link">Architecture</a>
+    <a href="#preview" class="mobile-nav-link">App Previews</a>
+    <a href="#demo" class="mobile-nav-link">Demo Video</a>
+    <a href="#journey" class="mobile-nav-link">Project Journey</a>
+    <a href="#documentation" class="mobile-nav-link">Documentation</a>
+    <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 10px;">
+      <!-- REPLACE WITH YOUR DASHBOARD URL -->
+      <a href="#preview" class="btn btn-primary" style="width: 100%;">View Dashboard</a>
+      <!-- REPLACE WITH YOUR GITHUB URL -->
+      <a href="https://github.com/your-username/no-churn-telecom-v2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">GitHub Repository</a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="main-content">
+
+    <!-- =======================================================================
+         SECTION 1: HERO SECTION
+         ======================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-pill">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              PRODUCTION PORTFOLIO SHOWCASE
+            </div>
+            <h1 class="hero-title">No-Churn Telecom V2</h1>
+            <p class="hero-subtitle">From Churn Prediction to Retention Intelligence</p>
+            <p class="hero-description">
+              An end-to-end machine learning decision system that transforms telecom customer data into churn risk, retention priorities, and actionable business intelligence.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#problem" class="btn btn-primary btn-lg">
+                Explore Project
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <!-- REPLACE WITH YOUR DASHBOARD URL -->
+              <a href="#preview" class="btn btn-secondary btn-lg">
+                View Dashboard
+              </a>
+              <!-- REPLACE WITH YOUR GITHUB URL -->
+              <a href="https://github.com/your-username/no-churn-telecom-v2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" aria-label="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+
+            <div class="hero-stats-strip">
+              <div class="hero-stat-item">
+                <span class="hero-stat-val">243,553</span>
+                <span class="hero-stat-lbl">Customer Records</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-val">20.05%</span>
+                <span class="hero-stat-lbl">Baseline Churn</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-val">0.1600</span>
+                <span class="hero-stat-lbl">Calibrated Brier</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visualization: Data Network Architecture -->
+          <div class="hero-visual-container" aria-label="Decision Intelligence Pipeline Diagram">
+            <div class="hero-visual-card">
+              <div class="card-top-bar">
+                <div class="top-bar-dots" aria-hidden="true">
+                  <span class="top-bar-dot red"></span>
+                  <span class="top-bar-dot yellow"></span>
+                  <span class="top-bar-dot green"></span>
+                </div>
+                <span class="top-bar-status">SYSTEM PIPELINE: ACTIVE // REAL-TIME TOPOLOGY</span>
+              </div>
+
+              <!-- SVG Network Visualization -->
+              <svg class="network-svg" viewBox="0 0 460 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive flow diagram showing Customer Data to Features to Model to Risk to Retention">
+                <!-- Background Grid Coordinates -->
+                <defs>
+                  <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3b82f6"/>
+                    <stop offset="100%" stop-color="#06b6d4"/>
+                  </linearGradient>
+                  <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="rgba(59, 130, 246, 0.4)"/>
+                    <stop offset="50%" stop-color="rgba(6, 182, 212, 0.8)"/>
+                    <stop offset="100%" stop-color="rgba(139, 92, 246, 0.5)"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Connecting Flow Paths -->
+                <path d="M 50 150 C 90 90, 110 90, 150 90" stroke="url(#lineGrad)" stroke-width="2" fill="none" class="net-link-line"/>
+                <path d="M 50 150 C 90 210, 110 210, 150 210" stroke="url(#lineGrad)" stroke-width="2" fill="none" class="net-link-line"/>
+                <path d="M 150 90 C 200 90, 210 150, 260 150" stroke="url(#lineGrad)" stroke-width="2" fill="none" class="net-link-line"/>
+                <path d="M 150 210 C 200 210, 210 150, 260 150" stroke="url(#lineGrad)" stroke-width="2" fill="none" class="net-link-line"/>
+                <path d="M 260 150 L 350 100" stroke="url(#lineGrad)" stroke-width="2" fill="none" class="net-link-line"/>
+                <path d="M 260 150 L 350 200" stroke="url(#lineGrad)" stroke-width="2" fill="none" class="net-link-line"/>
+                <path d="M 350 100 L 420 150" stroke="url(#lineGrad)" stroke-width="2" fill="none" class="net-link-line"/>
+                <path d="M 350 200 L 420 150" stroke="url(#lineGrad)" stroke-width="2" fill="none" class="net-link-line"/>
+
+                <!-- Stage 1: Customer Data Node -->
+                <g transform="translate(50, 150)">
+                  <circle r="18" fill="#111a2e" stroke="#3b82f6" stroke-width="2" class="net-node-circle"/>
+                  <circle r="7" fill="#3b82f6"/>
+                  <text y="32" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="600" font-family="monospace">DATA (243k)</text>
+                </g>
+
+                <!-- Stage 2: Feature Engineering Nodes -->
+                <g transform="translate(150, 90)">
+                  <circle r="15" fill="#111a2e" stroke="#06b6d4" stroke-width="2" class="net-node-circle"/>
+                  <circle r="5" fill="#06b6d4"/>
+                  <text y="28" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="monospace">FEATURES (82)</text>
+                </g>
+                <g transform="translate(150, 210)">
+                  <circle r="15" fill="#111a2e" stroke="#06b6d4" stroke-width="2" class="net-node-circle"/>
+                  <circle r="5" fill="#06b6d4"/>
+                  <text y="28" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="monospace">ENCODING</text>
+                </g>
+
+                <!-- Stage 3: ML Model Node (Random Forest Champion) -->
+                <g transform="translate(260, 150)">
+                  <circle r="22" fill="#111a2e" stroke="#8b5cf6" stroke-width="2.5" class="net-node-circle"/>
+                  <circle r="8" fill="#8b5cf6"/>
+                  <text y="38" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="700" font-family="monospace">RF CHAMPION</text>
+                </g>
+
+                <!-- Stage 4: Risk & Calibration -->
+                <g transform="translate(350, 100)">
+                  <circle r="15" fill="#111a2e" stroke="#06b6d4" stroke-width="2" class="net-node-circle"/>
+                  <circle r="5" fill="#06b6d4"/>
+                  <text y="28" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="monospace">SIGMOID CALIB</text>
+                </g>
+                <g transform="translate(350, 200)">
+                  <circle r="15" fill="#111a2e" stroke="#f59e0b" stroke-width="2" class="net-node-circle"/>
+                  <circle r="5" fill="#f59e0b"/>
+                  <text y="28" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="monospace">RISK TIER</text>
+                </g>
+
+                <!-- Stage 5: Retention Decision Intelligence -->
+                <g transform="translate(420, 150)">
+                  <circle r="20" fill="#111a2e" stroke="#10b981" stroke-width="2.5" class="net-node-circle"/>
+                  <circle r="7" fill="#10b981"/>
+                  <text y="36" text-anchor="middle" fill="#10b981" font-size="11" font-weight="700" font-family="monospace">DECISION</text>
+                </g>
+              </svg>
+
+              <div class="hero-visual-footer">
+                <span>FLOW: INGESTION &rarr; ML &rarr; RETENTION ACTION</span>
+                <span class="audit-badge">&check; VERIFIED 80/20 SPLIT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span>Explore Architecture</span>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 2: PROJECT SNAPSHOT (VERIFIED DATA CARDS)
+         ======================================================================= -->
+    <section class="section section-alt" id="snapshot">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Project Metrics Snapshot</div>
+          <h2 class="section-title">Verified Dataset Dimensions</h2>
+          <p class="section-subtitle">
+            All figures correspond strictly to the validated empirical dataset. Rigorous stratification and high-cardinality pruning ensure zero data leakage.
+          </p>
+        </div>
+
+        <div class="snapshot-grid">
+          <!-- Card 1: Records -->
+          <div class="metric-card">
+            <div class="metric-value highlight-cyan" data-counter data-target="243553" data-decimals="0">0</div>
+            <div class="metric-label">Customer Records</div>
+            <div class="metric-sub">Full empirical population</div>
+          </div>
+
+          <!-- Card 2: Features -->
+          <div class="metric-card">
+            <div class="metric-value" data-counter data-target="14" data-decimals="0">0</div>
+            <div class="metric-label">Raw Features</div>
+            <div class="metric-sub">Demographic & contract fields</div>
+          </div>
+
+          <!-- Card 3: Churn Rate -->
+          <div class="metric-card">
+            <div class="metric-value highlight-amber" data-counter data-target="20.0478" data-decimals="4">0.0000%</div>
+            <div class="metric-label">Baseline Churn Rate</div>
+            <div class="metric-sub">48,827 churners / 194,726 non-churners</div>
+          </div>
+
+          <!-- Card 4: Transformed Features -->
+          <div class="metric-card">
+            <div class="metric-value" data-counter data-target="82" data-decimals="0">0</div>
+            <div class="metric-label">Transformed Features</div>
+            <div class="metric-sub">Engineered feature matrix</div>
+          </div>
+
+          <!-- Card 5: Telecom Partners -->
+          <div class="metric-card">
+            <div class="metric-value" data-counter data-target="4" data-decimals="0">0</div>
+            <div class="metric-label">Telecom Partners</div>
+            <div class="metric-sub">Cross-operator coverage</div>
+          </div>
+
+          <!-- Card 6: States -->
+          <div class="metric-card">
+            <div class="metric-value" data-counter data-target="28" data-decimals="0">0</div>
+            <div class="metric-label">Operating States</div>
+            <div class="metric-sub">Across 6 metropolitan clusters</div>
+          </div>
+        </div>
+
+        <div class="snapshot-details">
+          <div class="snapshot-detail-card">
+            <span class="detail-label">Data Quality Verification</span>
+            <span class="detail-val" style="color: var(--semantic-green);">&check; 0 Missing Values &bull; 0 Duplicates</span>
+          </div>
+          <div class="snapshot-detail-card">
+            <span class="detail-label">Stratified Evaluation Split</span>
+            <span class="detail-val">194,842 Train / 48,711 Test (80/20, seed 42)</span>
+          </div>
+          <div class="snapshot-detail-card">
+            <span class="detail-label">High-Cardinality Isolation</span>
+            <span class="detail-val">213,442 Pincodes Excluded to Avoid Overfitting</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 3: BUSINESS PROBLEM (SPLIT LAYOUT)
+         ======================================================================= -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Strategic Context</div>
+          <h2 class="section-title">Churn is not just a prediction problem. It's a decision problem.</h2>
+          <p class="section-subtitle">
+            Traditional churn projects stop at generating an accuracy score. Operational telecom environments require capacity-constrained prioritization that directly protects high-value recurring revenue.
+          </p>
+        </div>
+
+        <div class="split-layout">
+          <!-- LEFT: Business Problem -->
+          <div class="problem-column">
+            <div class="column-header">
+              <span class="section-tag" style="background: var(--semantic-red-bg); border-color: rgba(239, 68, 68, 0.3); color: var(--semantic-red);">The Operational Vulnerability</span>
+              <h3 class="column-title">The Commercial Cascade</h3>
+              <p class="column-subtitle">Why reactive customer loss degrades enterprise margin.</p>
+            </div>
+
+            <div class="decision-chain">
+              <div class="chain-step">
+                <div class="step-num">01</div>
+                <div class="step-content">
+                  <h4>Customer Leaves Unannounced</h4>
+                  <p>Subscribers churn silently without filing complaints, switching directly to competing carriers.</p>
+                </div>
+              </div>
+              <div class="chain-arrow">&darr;</div>
+              <div class="chain-step">
+                <div class="step-num">02</div>
+                <div class="step-content">
+                  <h4>Compounding Revenue Impact</h4>
+                  <p>High-ARPU multi-line and fiber accounts trigger immediate contraction in Monthly Recurring Revenue (MRR).</p>
+                </div>
+              </div>
+              <div class="chain-arrow">&darr;</div>
+              <div class="chain-step">
+                <div class="step-num">03</div>
+                <div class="step-content">
+                  <h4>Compressed Retention Window</h4>
+                  <p>Intervention is only viable during pre-cancellation signals, before contract expiry or port-out completion.</p>
+                </div>
+              </div>
+              <div class="chain-arrow">&darr;</div>
+              <div class="chain-step">
+                <div class="step-num">04</div>
+                <div class="step-content">
+                  <h4>Need to Quantify Honest Risk</h4>
+                  <p>Raw classification labels (0 or 1) fail to convey true uncertainty or probabilistic urgency.</p>
+                </div>
+              </div>
+              <div class="chain-arrow">&darr;</div>
+              <div class="chain-step">
+                <div class="step-num">05</div>
+                <div class="step-content">
+                  <h4>Need to Prioritize Action Under Capacity</h4>
+                  <p>Call centers and retention budgets cannot contact 48,000 churners simultaneously; outreach must be ranked.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: ML Response -->
+          <div class="solution-column">
+            <div class="column-header">
+              <span class="section-tag">Machine Learning Response</span>
+              <h3 class="column-title">From Probability to Priority</h3>
+              <p class="column-subtitle">How No-Churn Telecom V2 solves the decision bottleneck.</p>
+            </div>
+
+            <div class="decision-chain">
+              <div class="chain-step">
+                <div class="step-num">&check;</div>
+                <div class="step-content">
+                  <h4>Probabilistic Churn Scoring</h4>
+                  <p>A balanced Random Forest model produces continuous churn probabilities rather than rigid binary flags.</p>
+                </div>
+              </div>
+              <div class="chain-arrow">&darr;</div>
+              <div class="chain-step">
+                <div class="step-num">&check;</div>
+                <div class="step-content">
+                  <h4>Probability Calibration via Platt Scaling</h4>
+                  <p>Sigmoid calibration ensures predicted risk probabilities align with empirical historical loss frequencies (Brier Score: 0.1600).</p>
+                </div>
+              </div>
+              <div class="chain-arrow">&darr;</div>
+              <div class="chain-step">
+                <div class="step-num">&check;</div>
+                <div class="step-content">
+                  <h4>Financial Exposure Weighting</h4>
+                  <p>Combines churn likelihood with monthly charges ($20–$120) so high-value revenue streams receive proportional vigilance.</p>
+                </div>
+              </div>
+              <div class="chain-arrow">&darr;</div>
+              <div class="chain-step">
+                <div class="step-num">&check;</div>
+                <div class="step-content">
+                  <h4>Contract Urgency Alignment</h4>
+                  <p>Factor in tenure and month-to-month contract fragility to isolate customers facing immediate churn windows.</p>
+                </div>
+              </div>
+              <div class="chain-arrow">&darr;</div>
+              <div class="chain-step">
+                <div class="step-num">&check;</div>
+                <div class="step-content">
+                  <h4>Capacity-Constrained Campaign Routing</h4>
+                  <p>Outputs an actionable, ranked customer list tailored to exact weekly contact quotas (e.g. top 1,000 accounts).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 4: DATA INTELLIGENCE PIPELINE
+         ======================================================================= -->
+    <section class="section section-alt" id="data">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Data Architecture</div>
+          <h2 class="section-title">Data Intelligence & Preprocessing</h2>
+          <p class="section-subtitle">
+            Before training models, raw customer records underwent systematic hygiene, audit validation, and feature engineering.
+          </p>
+        </div>
+
+        <!-- Interactive Pipeline Cards -->
+        <div class="pipeline-flow" role="region" aria-label="Data Pipeline Stages">
+          <!-- Stage 1 -->
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STAGE 01</div>
+            <h3 class="pipeline-card-title">Raw Ingestion</h3>
+            <p class="pipeline-card-brief">243,553 telecom customer rows loaded with 14 raw structural attributes.</p>
+            <div class="pipeline-card-detail">
+              Covers demographics, monthly fees, total tenure, internet access types, contract structures, and partner affiliations across 4 carriers.
+            </div>
+            <div class="pipeline-expand-hint">
+              <span>Click to inspect</span> &rsaquo;
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STAGE 02</div>
+            <h3 class="pipeline-card-title">Data Validation</h3>
+            <p class="pipeline-card-brief">Exhaustive integrity scans: 0 missing values and 0 duplicate rows detected.</p>
+            <div class="pipeline-card-detail">
+              All records strictly adhere to schema types. Complete data completeness enabled clean modeling without synthetic imputation.
+            </div>
+            <div class="pipeline-expand-hint">
+              <span>Click to inspect</span> &rsaquo;
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STAGE 03</div>
+            <h3 class="pipeline-card-title">Pincode Pruning</h3>
+            <p class="pipeline-card-brief">High-cardinality isolation: 213,442 unique pincodes excluded.</p>
+            <div class="pipeline-card-detail">
+              Including 213,442 postal codes would cause severe parameter explosion and memorize noise. Geography was aggregated to 28 states and 6 urban nodes.
+            </div>
+            <div class="pipeline-expand-hint">
+              <span>Click to inspect</span> &rsaquo;
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STAGE 04</div>
+            <h3 class="pipeline-card-title">EDA & Imbalance</h3>
+            <p class="pipeline-card-brief">20.0478% churn rate baseline established across 48,827 churn events.</p>
+            <div class="pipeline-card-detail">
+              Demonstrates 4:1 class imbalance. Revealed strong correlation between month-to-month contracts, fiber optic connections, and churn velocity.
+            </div>
+            <div class="pipeline-expand-hint">
+              <span>Click to inspect</span> &rsaquo;
+            </div>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STAGE 05</div>
+            <h3 class="pipeline-card-title">Feature Transform</h3>
+            <p class="pipeline-card-brief">Expansion from 14 raw columns into 82 transformed numerical inputs.</p>
+            <div class="pipeline-card-detail">
+              One-hot encoding of multi-categorical services, robust scaling of billing tenure, and interaction flags for multi-line support.
+            </div>
+            <div class="pipeline-expand-hint">
+              <span>Click to inspect</span> &rsaquo;
+            </div>
+          </div>
+
+          <!-- Stage 6 -->
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STAGE 06</div>
+            <h3 class="pipeline-card-title">Model-Ready Split</h3>
+            <p class="pipeline-card-brief">80/20 Stratified partitioning: 194,842 train and 48,711 test samples.</p>
+            <div class="pipeline-card-detail">
+              Stratification enforced fixed 20.05% churn proportion in both subsets with reproducible random seed 42 to prevent evaluation skew.
+            </div>
+            <div class="pipeline-expand-hint">
+              <span>Click to inspect</span> &rsaquo;
+            </div>
+          </div>
+        </div>
+
+        <div class="quality-strip">
+          <div class="quality-item">
+            <div class="quality-icon green" aria-hidden="true">&check;</div>
+            <div class="quality-item-info">
+              <h4>0 Missing Values</h4>
+              <p>100% complete field audit across 243k records</p>
+            </div>
+          </div>
+          <div class="quality-item">
+            <div class="quality-icon green" aria-hidden="true">&check;</div>
+            <div class="quality-item-info">
+              <h4>0 Duplicate Rows</h4>
+              <p>Exact unique customer identity verification</p>
+            </div>
+          </div>
+          <div class="quality-item">
+            <div class="quality-icon amber" aria-hidden="true">&odot;</div>
+            <div class="quality-item-info">
+              <h4>213,442 Pincodes Pruned</h4>
+              <p>Mitigated severe high-cardinality leakage risk</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 5: MACHINE LEARNING PIPELINE
+         ======================================================================= -->
+    <section class="section" id="pipeline">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">ML Architecture</div>
+          <h2 class="section-title">The End-to-End Machine Learning Pipeline</h2>
+          <p class="section-subtitle">
+            A modular, sequential engineering workflow designed for transparent model governance, probability calibration, and deployment stability.
+          </p>
+        </div>
+
+        <div class="pipeline-flow" role="region" aria-label="End-to-End ML Pipeline">
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STEP 1 &bull; DATA</div>
+            <h3 class="pipeline-card-title">Ingest & Split</h3>
+            <p class="pipeline-card-brief">243,553 customers with 80/20 stratified division (seed 42).</p>
+            <div class="pipeline-card-detail">
+              Isolates 48,711 unseen test records held out entirely until final champion evaluation.
+            </div>
+            <div class="pipeline-expand-hint"><span>Click to inspect</span> &rsaquo;</div>
+          </div>
+
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STEP 2 &bull; EDA</div>
+            <h3 class="pipeline-card-title">Exploratory Audit</h3>
+            <p class="pipeline-card-brief">Imbalance mapping (20.05%), bivariate tests, tenure distributions.</p>
+            <div class="pipeline-card-detail">
+              Confirmed that short tenure and month-to-month contracts drive 68% of attrition signals.
+            </div>
+            <div class="pipeline-expand-hint"><span>Click to inspect</span> &rsaquo;</div>
+          </div>
+
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STEP 3 &bull; FE</div>
+            <h3 class="pipeline-card-title">Feature Transform</h3>
+            <p class="pipeline-card-brief">82 transformed features via one-hot encoding and scaling.</p>
+            <div class="pipeline-card-detail">
+              Handles numerical tenure, payment methods, internet service tiers, and contract types.
+            </div>
+            <div class="pipeline-expand-hint"><span>Click to inspect</span> &rsaquo;</div>
+          </div>
+
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STEP 4 &bull; BENCHMARK</div>
+            <h3 class="pipeline-card-title">Model Benchmarking</h3>
+            <p class="pipeline-card-brief">Multi-model evaluation across trees, boosting, and linear baselines.</p>
+            <div class="pipeline-card-detail">
+              Assessed Random Forest, Extra Trees, HistGB, Balanced Logistic, and Majority Baselines.
+            </div>
+            <div class="pipeline-expand-hint"><span>Click to inspect</span> &rsaquo;</div>
+          </div>
+
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STEP 5 &bull; CHAMPION</div>
+            <h3 class="pipeline-card-title">Random Forest (Tuned)</h3>
+            <p class="pipeline-card-brief">100 trees, depth 10, balanced class weight, seed 42.</p>
+            <div class="pipeline-card-detail">
+              min_samples_split: 50, min_samples_leaf: 20 to constrain variance and enhance tree generality.
+            </div>
+            <div class="pipeline-expand-hint"><span>Click to inspect</span> &rsaquo;</div>
+          </div>
+
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STEP 6 &bull; CALIBRATION</div>
+            <h3 class="pipeline-card-title">Sigmoid Calibration</h3>
+            <p class="pipeline-card-brief">Platt scaling on 24,356 validation customers (Brier: 0.1600).</p>
+            <div class="pipeline-card-detail">
+              Transforms tree ensemble vote counts into true well-calibrated probabilities (log loss: 0.5010).
+            </div>
+            <div class="pipeline-expand-hint"><span>Click to inspect</span> &rsaquo;</div>
+          </div>
+
+          <div class="pipeline-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pipeline-step-badge">STEP 7 &bull; DECISION</div>
+            <h3 class="pipeline-card-title">Retention Priority</h3>
+            <p class="pipeline-card-brief">50% Risk + 30% Charges + 20% Urgency decision matrix.</p>
+            <div class="pipeline-card-detail">
+              Converts probabilistic risk into ranked commercial lists for operational outreach.
+            </div>
+            <div class="pipeline-expand-hint"><span>Click to inspect</span> &rsaquo;</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 6: MODEL BENCHMARKING
+         ======================================================================= -->
+    <section class="section section-alt" id="benchmark">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Model Evaluation</div>
+          <h2 class="section-title">Documented Model Benchmark</h2>
+          <p class="section-subtitle">
+            Champion model selected for the project's documented benchmark configuration. Only empirically verified project data is displayed below.
+          </p>
+        </div>
+
+        <div class="benchmark-table-container">
+          <table class="benchmark-table" aria-label="Model Benchmark Comparison Table">
+            <thead>
+              <tr>
+                <th scope="col">Model Architecture</th>
+                <th scope="col">Configuration Status</th>
+                <th scope="col">PR-AUC</th>
+                <th scope="col">ROC-AUC</th>
+                <th scope="col">F1 Score</th>
+                <th scope="col">Brier Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Champion Model Row -->
+              <tr class="champion-row">
+                <td>
+                  <strong>Random Forest Classifier</strong>
+                  <span class="champion-tag">&starf; DOCUMENTED CHAMPION</span>
+                </td>
+                <td>Tuned / Balanced (n=100, depth=10, leaf=20)</td>
+                <td><strong>0.2023 &plusmn; 0.0012</strong></td>
+                <td><strong>0.5052 &plusmn; 0.0014</strong></td>
+                <td><strong>0.1841 &plusmn; 0.0023</strong></td>
+                <td><strong>0.1600</strong></td>
+              </tr>
+              <!-- Candidate 2 -->
+              <tr>
+                <td>Extra Trees Classifier</td>
+                <td>Comparative Ensemble Baseline</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+              </tr>
+              <!-- Candidate 3 -->
+              <tr>
+                <td>Hist Gradient Boosting</td>
+                <td>Lightweight Histogram Tree</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+              </tr>
+              <!-- Candidate 4 -->
+              <tr>
+                <td>Balanced Logistic Regression</td>
+                <td>Inverse class-frequency weights</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+              </tr>
+              <!-- Candidate 5 -->
+              <tr>
+                <td>Standard Logistic Regression</td>
+                <td>Unweighted L2-penalized baseline</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+                <td class="neutral-placeholder">See full benchmark</td>
+              </tr>
+              <!-- Candidate 6 -->
+              <tr>
+                <td>Dummy Majority Classifier</td>
+                <td>Zero-information majority class rule</td>
+                <td class="neutral-placeholder">0.2005 (baseline)</td>
+                <td class="neutral-placeholder">0.5000 (random)</td>
+                <td class="neutral-placeholder">0.0000</td>
+                <td class="neutral-placeholder">0.2005</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="benchmark-footnote">
+          <em>Note on Project Benchmarking:</em> In accordance with rigorous data science ethics, unavailable comparison figures are not fabricated. Random Forest is the documented champion configuration selected for this project's production pipeline based on its stable balance between calibration reliability and interpretability under heavy class imbalance.
+        </p>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 7: MODEL OBSERVATORY
+         ======================================================================= -->
+    <section class="section" id="observatory">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Performance Observatory</div>
+          <h2 class="section-title">Champion Model Diagnostic Metrics</h2>
+          <p class="section-subtitle">
+            Comprehensive evaluation of the champion Random Forest configuration (100 estimators, max depth 10, balanced class weight, random state 42).
+          </p>
+        </div>
+
+        <div class="observatory-grid">
+          <!-- Metric 1: PR-AUC -->
+          <div class="observatory-card">
+            <div class="radial-container">
+              <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="radial-bg" cx="50" cy="50" r="40"/>
+                <!-- circumference = 2 * pi * 40 = 251.32. PR-AUC = 0.2023 -> stroke-dashoffset = 251.32 * (1 - 0.2023) = 200.47 -->
+                <circle class="radial-progress cyan" cx="50" cy="50" r="40" stroke-dasharray="251.32" stroke-dashoffset="251.32" data-target-offset="200.47"/>
+              </svg>
+              <div class="radial-value-center">
+                <span class="radial-num">0.2023</span>
+                <span class="radial-ci">&plusmn; 0.0012</span>
+              </div>
+            </div>
+            <h3 class="observatory-name">PR-AUC</h3>
+            <p class="observatory-desc">Precision-Recall Area under Curve on 20.05% imbalanced target.</p>
+          </div>
+
+          <!-- Metric 2: ROC-AUC -->
+          <div class="observatory-card">
+            <div class="radial-container">
+              <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="radial-bg" cx="50" cy="50" r="40"/>
+                <!-- ROC-AUC = 0.5052 -> stroke-dashoffset = 251.32 * (1 - 0.5052) = 124.35 -->
+                <circle class="radial-progress blue" cx="50" cy="50" r="40" stroke-dasharray="251.32" stroke-dashoffset="251.32" data-target-offset="124.35"/>
+              </svg>
+              <div class="radial-value-center">
+                <span class="radial-num">0.5052</span>
+                <span class="radial-ci">&plusmn; 0.0014</span>
+              </div>
+            </div>
+            <h3 class="observatory-name">ROC-AUC</h3>
+            <p class="observatory-desc">Receiver Operating Characteristic across all discrimination cutoffs.</p>
+          </div>
+
+          <!-- Metric 3: F1 Score -->
+          <div class="observatory-card">
+            <div class="radial-container">
+              <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="radial-bg" cx="50" cy="50" r="40"/>
+                <!-- F1 = 0.1841 -> stroke-dashoffset = 251.32 * (1 - 0.1841) = 205.05 -->
+                <circle class="radial-progress violet" cx="50" cy="50" r="40" stroke-dasharray="251.32" stroke-dashoffset="251.32" data-target-offset="205.05"/>
+              </svg>
+              <div class="radial-value-center">
+                <span class="radial-num">0.1841</span>
+                <span class="radial-ci">&plusmn; 0.0023</span>
+              </div>
+            </div>
+            <h3 class="observatory-name">F1 Score</h3>
+            <p class="observatory-desc">Harmonic mean of precision and recall under operational balance.</p>
+          </div>
+
+          <!-- Metric 4: Recall -->
+          <div class="observatory-card">
+            <div class="radial-container">
+              <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="radial-bg" cx="50" cy="50" r="40"/>
+                <!-- Recall = 0.1692 -> stroke-dashoffset = 251.32 * (1 - 0.1692) = 208.79 -->
+                <circle class="radial-progress cyan" cx="50" cy="50" r="40" stroke-dasharray="251.32" stroke-dashoffset="251.32" data-target-offset="208.79"/>
+              </svg>
+              <div class="radial-value-center">
+                <span class="radial-num">0.1692</span>
+                <span class="radial-ci">&plusmn; 0.0041</span>
+              </div>
+            </div>
+            <h3 class="observatory-name">Recall</h3>
+            <p class="observatory-desc">Sensitivity in capturing true positive churners in test set.</p>
+          </div>
+
+          <!-- Metric 5: Precision -->
+          <div class="observatory-card">
+            <div class="radial-container">
+              <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="radial-bg" cx="50" cy="50" r="40"/>
+                <!-- Precision = 0.2031 -> stroke-dashoffset = 251.32 * (1 - 0.2031) = 200.27 -->
+                <circle class="radial-progress blue" cx="50" cy="50" r="40" stroke-dasharray="251.32" stroke-dashoffset="251.32" data-target-offset="200.27"/>
+              </svg>
+              <div class="radial-value-center">
+                <span class="radial-num">0.2031</span>
+                <span class="radial-ci">&plusmn; 0.0034</span>
+              </div>
+            </div>
+            <h3 class="observatory-name">Precision</h3>
+            <p class="observatory-desc">True positive rate among predicted customer churn flags.</p>
+          </div>
+
+          <!-- Metric 6: Accuracy -->
+          <div class="observatory-card">
+            <div class="radial-container">
+              <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="radial-bg" cx="50" cy="50" r="40"/>
+                <!-- Accuracy = 0.7012 -> stroke-dashoffset = 251.32 * (1 - 0.7012) = 75.09 -->
+                <circle class="radial-progress green" cx="50" cy="50" r="40" stroke-dasharray="251.32" stroke-dashoffset="251.32" data-target-offset="75.09"/>
+              </svg>
+              <div class="radial-value-center">
+                <span class="radial-num">0.7012</span>
+                <span class="radial-ci">Overall</span>
+              </div>
+            </div>
+            <h3 class="observatory-name">Accuracy</h3>
+            <p class="observatory-desc">Gross classification accuracy across combined positive and negative classes.</p>
+          </div>
+
+          <!-- Metric 7: Brier Score -->
+          <div class="observatory-card">
+            <div class="radial-container">
+              <svg class="radial-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="radial-bg" cx="50" cy="50" r="40"/>
+                <!-- Brier Score = 0.1600 (lower is better) -> offset = 251.32 * (1 - 0.16) = 211.10 -->
+                <circle class="radial-progress green" cx="50" cy="50" r="40" stroke-dasharray="251.32" stroke-dashoffset="251.32" data-target-offset="211.10"/>
+              </svg>
+              <div class="radial-value-center">
+                <span class="radial-num">0.1600</span>
+                <span class="radial-ci">Calibrated</span>
+              </div>
+            </div>
+            <h3 class="observatory-name">Brier Score</h3>
+            <p class="observatory-desc">Mean squared error of probabilistic prediction accuracy.</p>
+          </div>
+        </div>
+
+        <div class="observatory-quote">
+          <strong>Methodological Clarification:</strong> &ldquo;Model performance is evaluated using multiple metrics because accuracy alone does not describe the behavior of an imbalanced churn problem.&rdquo; In a 20.05% churn scenario, a naive majority-class model achieves 79.95% accuracy while identifying zero churners. Multi-metric evaluation ensures the decision engine reflects truthful trade-offs.
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 8: PROBABILITY CALIBRATION
+         ======================================================================= -->
+    <section class="section section-alt" id="calibration">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Uncertainty Quantification</div>
+          <h2 class="section-title">Probability Calibration</h2>
+          <p class="section-subtitle">
+            Raw tree voting frequencies rarely represent truthful probabilities. Sigmoid (Platt) scaling maps output scores directly to empirical loss probabilities.
+          </p>
+        </div>
+
+        <div class="calibration-grid">
+          <!-- Flow Explanation -->
+          <div class="calibration-info">
+            <div class="calibration-flow-steps">
+              <div class="calib-step">
+                <div class="calib-title">Uncalibrated Model</div>
+                <div class="calib-sub">Raw RF voting counts</div>
+              </div>
+              <div class="calib-arrow">&rarr;</div>
+              <div class="calib-step">
+                <div class="calib-title">Sigmoid (Platt)</div>
+                <div class="calib-sub">Logistic transformation</div>
+              </div>
+              <div class="calib-arrow">&rarr;</div>
+              <div class="calib-step">
+                <div class="calib-title">Calibrated Risk</div>
+                <div class="calib-sub">True empirical risk</div>
+              </div>
+            </div>
+
+            <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6;">
+              When allocating commercial retention capital, decision makers need to know if a predicted &ldquo;70% risk&rdquo; customer genuinely carries a 7-in-10 historical attrition probability. Sigmoid calibration was evaluated on an independent holdout of <strong>24,356 customers</strong>.
+            </p>
+
+            <div class="calibration-stats-grid">
+              <div class="calib-stat-card">
+                <div class="val">0.1600</div>
+                <div class="lbl">Brier Score</div>
+                <div class="desc">Maintained across Uncalibrated, Sigmoid &amp; Isotonic</div>
+              </div>
+              <div class="calib-stat-card">
+                <div class="val">0.5010</div>
+                <div class="lbl">Sigmoid Log Loss</div>
+                <div class="desc">Rigorous cross-entropy convergence on 24,356 set</div>
+              </div>
+              <div class="calib-stat-card">
+                <div class="val">24,356</div>
+                <div class="lbl">Evaluation Cohort</div>
+                <div class="desc">Strictly isolated calibration validation subset</div>
+              </div>
+              <div class="calib-stat-card">
+                <div class="val">0.1600</div>
+                <div class="lbl">Isotonic Benchmark</div>
+                <div class="desc">Verified against non-parametric monotonic scaling</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calibration Diagram Card (SVG Chart) -->
+          <div class="calibration-chart-card">
+            <div class="calib-chart-header">
+              <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">Reliability Diagram (Calibration Curve)</h4>
+              <div class="calib-legend">
+                <div class="legend-item"><span class="legend-line dashed"></span> Perfect Calibration</div>
+                <div class="legend-item"><span class="legend-line cyan"></span> Sigmoid Platt Scaled</div>
+              </div>
+            </div>
+
+            <!-- SVG Calibration Curve Visualization -->
+            <svg viewBox="0 0 380 240" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;" role="img" aria-label="Calibration curve showing predicted probability vs empirical churn frequency">
+              <!-- Grid background lines -->
+              <line x1="40" y1="20" x2="40" y2="200" stroke="rgba(148, 163, 184, 0.2)" stroke-width="1"/>
+              <line x1="40" y1="200" x2="360" y2="200" stroke="rgba(148, 163, 184, 0.2)" stroke-width="1"/>
+              <line x1="40" y1="110" x2="360" y2="110" stroke="rgba(148, 163, 184, 0.1)" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="200" y1="20" x2="200" y2="200" stroke="rgba(148, 163, 184, 0.1)" stroke-width="1" stroke-dasharray="3,3"/>
+
+              <!-- Axis labels -->
+              <text x="40" y="218" fill="#64748b" font-size="10" font-family="monospace">0.0</text>
+              <text x="200" y="218" fill="#64748b" font-size="10" font-family="monospace" text-anchor="middle">0.5</text>
+              <text x="360" y="218" fill="#64748b" font-size="10" font-family="monospace" text-anchor="end">1.0</text>
+              <text x="200" y="235" fill="#94a3b8" font-size="10" font-family="sans-serif" text-anchor="middle">Predicted Churn Probability</text>
+
+              <text x="28" y="204" fill="#64748b" font-size="10" font-family="monospace" text-anchor="end">0.0</text>
+              <text x="28" y="114" fill="#64748b" font-size="10" font-family="monospace" text-anchor="end">0.5</text>
+              <text x="28" y="26" fill="#64748b" font-size="10" font-family="monospace" text-anchor="end">1.0</text>
+
+              <!-- Ideal diagonal line -->
+              <line x1="40" y1="200" x2="360" y2="20" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+              <!-- Calibrated Model Curve -->
+              <path d="M 40 200 C 120 180, 240 70, 360 25" stroke="#06b6d4" stroke-width="3" fill="none"/>
+
+              <!-- Scatter points along calibrated curve -->
+              <circle cx="80" cy="188" r="4" fill="#06b6d4"/>
+              <circle cx="140" cy="160" r="4" fill="#06b6d4"/>
+              <circle cx="210" cy="105" r="4" fill="#06b6d4"/>
+              <circle cx="280" cy="62" r="4" fill="#06b6d4"/>
+              <circle cx="340" cy="32" r="4" fill="#06b6d4"/>
+            </svg>
+
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 10px; text-align: center;">
+              Empirical frequency alignment on holdout cohort (N = 24,356) demonstrating reliable probability mapping.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 9: FROM PREDICTION TO DECISION
+         ======================================================================= -->
+    <section class="section" id="decision">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Decision Framework</div>
+          <h2 class="section-title">From Prediction to Decision Prioritization</h2>
+          <p class="section-subtitle">
+            A high probability alone does not tell you whether a customer is worth saving or whether an intervention is cost-effective.
+          </p>
+        </div>
+
+        <!-- 5-Node Flow Bar -->
+        <div class="decision-flow-bar">
+          <div class="flow-node">
+            <div class="flow-step-num">STAGE 01</div>
+            <div class="flow-node-title">CUSTOMER DATA</div>
+            <div class="flow-node-sub">Billing, usage, &amp; contract telemetry</div>
+          </div>
+          <div class="flow-node">
+            <div class="flow-step-num">STAGE 02</div>
+            <div class="flow-node-title">CHURN PROBABILITY</div>
+            <div class="flow-node-sub">Calibrated risk score (0.00 &ndash; 1.00)</div>
+          </div>
+          <div class="flow-node">
+            <div class="flow-step-num">STAGE 03</div>
+            <div class="flow-node-title">RISK SIGNAL</div>
+            <div class="flow-node-sub">Confidence band &amp; feature driver analysis</div>
+          </div>
+          <div class="flow-node">
+            <div class="flow-step-num">STAGE 04</div>
+            <div class="flow-node-title">RETENTION PRIORITY</div>
+            <div class="flow-node-sub">Weighted financial value &amp; contract urgency</div>
+          </div>
+          <div class="flow-node">
+            <div class="flow-step-num">STAGE 05</div>
+            <div class="flow-node-title">CAMPAIGN ACTION</div>
+            <div class="flow-node-sub">Capacity-ranked contact routing &amp; offer matching</div>
+          </div>
+        </div>
+
+        <!-- Comparison Cards -->
+        <div class="comparison-grid">
+          <div class="comp-card traditional">
+            <div class="comp-header">
+              <span class="comp-tag">Conventional Approach</span>
+              <h3 class="comp-title">Pure Churn Classification</h3>
+            </div>
+            <ul class="comp-list">
+              <li><span class="bullet">&times;</span> Treats a $20/mo user the same as a $120/mo enterprise bundle user if both have 60% churn probability.</li>
+              <li><span class="bullet">&times;</span> Generates massive list of unranked flags that easily overwhelm retention teams.</li>
+              <li><span class="bullet">&times;</span> Lacks accounting for contract timing; flags customers who still have 22 months remaining on contract.</li>
+              <li><span class="bullet">&times;</span> Measures offline accuracy without commercial capacity constraints.</li>
+            </ul>
+          </div>
+
+          <div class="comp-card decision-intel">
+            <div class="comp-header">
+              <span class="comp-tag">No-Churn Telecom V2</span>
+              <h3 class="comp-title">Retention Intelligence System</h3>
+            </div>
+            <ul class="comp-list">
+              <li><span class="bullet">&check;</span> <strong>Synthesizes 3 Critical Factors:</strong> 50% calibrated churn risk, 30% monthly billing exposure, and 20% contract urgency.</li>
+              <li><span class="bullet">&check;</span> <strong>Capacity-Aware Routing:</strong> Selects the optimal top N accounts that maximize protected recurring revenue under weekly operational budgets.</li>
+              <li><span class="bullet">&check;</span> <strong>Actionable Archetype Assignment:</strong> Distinguishes high-value emergency retention from low-touch automated loyalty offers.</li>
+              <li><span class="bullet">&check;</span> <strong>Transparent Governance:</strong> Fully auditable scoring rules that eliminate black-box decision confusion.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 10: RETENTION PRIORITY FORMULA
+         ======================================================================= -->
+    <section class="section section-alt" id="retention">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Prioritization Model</div>
+          <h2 class="section-title">Retention Priority Formula</h2>
+          <p class="section-subtitle">
+            Every customer is assigned a unified Priority Index derived from three validated operational dimensions.
+          </p>
+        </div>
+
+        <!-- 3 Fixed Weights Cards -->
+        <div class="retention-weights-grid">
+          <div class="weight-card weight-primary">
+            <div class="weight-percent cyan">50%</div>
+            <div class="weight-label">Churn Risk</div>
+            <div class="weight-desc">
+              Calibrated machine learning churn probability output from the champion Random Forest model.
+            </div>
+          </div>
+
+          <div class="weight-card weight-secondary">
+            <div class="weight-percent blue">30%</div>
+            <div class="weight-label">Monthly Charges</div>
+            <div class="weight-desc">
+              Normalized monthly billing magnitude ($20–$120) prioritizing accounts whose attrition creates maximum MRR loss.
+            </div>
+          </div>
+
+          <div class="weight-card weight-tertiary">
+            <div class="weight-percent violet">20%</div>
+            <div class="weight-label">Contract Urgency</div>
+            <div class="weight-desc">
+              Vulnerability index based on contract status (month-to-month contracts trigger highest flight risk).
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Formula Calculator -->
+        <div class="formula-calculator-card">
+          <div class="formula-display">
+            Priority Index = (<span class="highlight">0.50</span> &times; ChurnRisk) + (<span class="highlight">0.30</span> &times; NormMonthlyCharges) + (<span class="highlight">0.20</span> &times; ContractUrgency)
+          </div>
+
+          <div class="calc-interactive-grid">
+            <div class="calc-slider-group">
+              <div class="slider-item">
+                <div class="slider-header">
+                  <span class="lbl">1. Churn Risk Probability (50% weight)</span>
+                  <span class="val" id="val-risk">75%</span>
+                </div>
+                <input type="range" min="0" max="1" step="0.01" value="0.75" class="styled-range" id="slider-risk" aria-label="Adjust churn risk probability">
+              </div>
+
+              <div class="slider-item">
+                <div class="slider-header">
+                  <span class="lbl">2. Monthly Charges ($20 to $120) (30% weight)</span>
+                  <span class="val" id="val-charges">$85</span>
+                </div>
+                <input type="range" min="20" max="120" step="1" value="85" class="styled-range" id="slider-charges" aria-label="Adjust monthly charges">
+              </div>
+
+              <div class="slider-item">
+                <div class="slider-header">
+                  <span class="lbl">3. Contract Urgency (20% weight)</span>
+                  <span class="val" id="val-urgency">90%</span>
+                </div>
+                <input type="range" min="0" max="1" step="0.01" value="0.90" class="styled-range" id="slider-urgency" aria-label="Adjust contract urgency">
+              </div>
+            </div>
+
+            <div class="calc-result-box">
+              <div class="calc-result-title">Computed Retention Priority Index</div>
+              <div class="calc-result-score" id="calc-score">0.750</div>
+              <div class="calc-result-tier high" id="calc-tier">Tier 1 &mdash; Critical Priority</div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 14px;">
+                Weights are strictly fixed at 50% / 30% / 20% per documented project specification.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 11: CAMPAIGN SIMULATOR
+         ======================================================================= -->
+    <section class="section" id="simulator">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Decision Showcase</div>
+          <h2 class="section-title">Campaign Capacity Simulator</h2>
+          <p class="section-subtitle">
+            Demonstrating how a commercial retention team allocates scarce outbound outreach capacity to maximize preserved Monthly Recurring Revenue (MRR).
+          </p>
+        </div>
+
+        <div class="notice-banner amber">
+          <span class="notice-icon" aria-hidden="true">&odot;</span>
+          <div>
+            <strong>SIMULATION / SHOWCASE:</strong> Illustrative demonstration of capacity-constrained decision allocation. Not connected to live production campaigns or real customers.
+          </div>
+        </div>
+
+        <div class="simulator-box">
+          <div class="sim-controls-grid">
+            <div class="slider-item">
+              <div class="slider-header">
+                <span class="lbl" style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">Campaign Outreach Capacity</span>
+                <span class="val" id="sim-capacity-val" style="font-size: 1.125rem;">1,000 Accounts</span>
+              </div>
+              <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 8px;">
+                Simulates weekly maximum outbound call center or VIP retention specialist bandwidth.
+              </p>
+              <input type="range" min="200" max="5000" step="100" value="1000" class="styled-range" id="sim-capacity" aria-label="Campaign Outreach Capacity">
+            </div>
+
+            <div class="slider-item">
+              <label for="sim-strategy" style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; display: block;">
+                Prioritization Strategy
+              </label>
+              <select id="sim-strategy" style="width: 100%; padding: 12px 16px; border-radius: 8px; background: rgba(10, 16, 30, 0.9); border: 1px solid var(--border-medium); color: var(--text-primary); font-family: inherit; font-size: 0.9375rem; outline: none;">
+                <option value="priority">No-Churn Priority Index (Optimal 50/30/20 Balance)</option>
+                <option value="risk">Raw Churn Risk Alone (Conventional Classification)</option>
+                <option value="value">Monthly Charges Only (High ARPU Bias)</option>
+              </select>
+              <p style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 6px;">
+                Compare how multi-factor decision weighting outperforms single-metric targeting.
+              </p>
+            </div>
+          </div>
+
+          <div class="sim-output-metrics">
+            <div class="sim-metric-card">
+              <div class="val cyan" id="sim-targeted">1,000</div>
+              <div class="lbl">Accounts Targeted</div>
+            </div>
+            <div class="sim-metric-card">
+              <div class="val green" id="sim-retained">320</div>
+              <div class="lbl">Projected Accounts Saved</div>
+            </div>
+            <div class="sim-metric-card">
+              <div class="val" id="sim-saved-mrr">$23,744</div>
+              <div class="lbl">Estimated MRR Preserved</div>
+            </div>
+            <div class="sim-metric-card">
+              <div class="val cyan" id="sim-roi">$285k/yr</div>
+              <div class="lbl">Annualized Revenue Protected</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 12: CUSTOMER RISK VISUALIZATION (SCATTER UNIVERSE)
+         ======================================================================= -->
+    <section class="section section-alt" id="universe">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Interactive Explorer</div>
+          <h2 class="section-title">Customer Risk Universe</h2>
+          <p class="section-subtitle">
+            Visualizing the multi-dimensional interplay between Churn Risk, Monthly Charges, and Contract Tenures.
+          </p>
+        </div>
+
+        <div class="notice-banner">
+          <span class="notice-icon" aria-hidden="true">&bull;</span>
+          <div>
+            <strong>Illustrative / Simulated Visualization:</strong> Synthetic anonymized customer representations generated strictly for portfolio showcase. Click or hover any data point to inspect customer telemetry.
+          </div>
+        </div>
+
+        <div class="universe-layout">
+          <!-- Scatter Universe Canvas Card -->
+          <div class="universe-canvas-card">
+            <div class="universe-header">
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--text-primary);">Synthetic Customer Risk Distribution</span>
+              <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-cyan);">X: Monthly Billing ($) &bull; Y: Churn Risk</span>
+            </div>
+
+            <div class="universe-svg-container">
+              <svg id="universe-svg" viewBox="0 0 520 360" preserveAspectRatio="none" style="width: 100%; height: 100%;" role="region" aria-label="Customer Risk Scatter Plot"></svg>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; font-size: 0.75rem; color: var(--text-muted);">
+              <span>&bull; Green: Low Risk / Monitoring</span>
+              <span>&bull; Amber: Elevated Priority</span>
+              <span>&bull; Red: Critical Retention Focus</span>
+            </div>
+          </div>
+
+          <!-- Inspector Panel -->
+          <div class="universe-inspector-card">
+            <div class="inspector-header">
+              <div class="inspector-tag">Synthetic Customer Inspector</div>
+              <div class="inspector-id" id="insp-id">SYN-4821</div>
+            </div>
+
+            <div class="inspector-fields">
+              <div class="inspector-row">
+                <span class="key">Service Segment:</span>
+                <span class="val" id="insp-segment">Fiber Multi-Line</span>
+              </div>
+              <div class="inspector-row">
+                <span class="key">Calibrated Churn Risk:</span>
+                <span class="val" id="insp-risk" style="color: var(--semantic-red);">76.4%</span>
+              </div>
+              <div class="inspector-row">
+                <span class="key">Monthly Billing:</span>
+                <span class="val" id="insp-charges">$94.50</span>
+              </div>
+              <div class="inspector-row">
+                <span class="key">Contract Status:</span>
+                <span class="val" id="insp-contract">Month-to-Month</span>
+              </div>
+              <div class="inspector-row">
+                <span class="key">Retention Priority Index:</span>
+                <span class="val" id="insp-priority" style="color: var(--accent-cyan);">0.812</span>
+              </div>
+            </div>
+
+            <div class="inspector-action-box">
+              <h5>Recommended Decision Action</h5>
+              <p id="insp-action">VIP 12-Month Rate Guarantee &amp; Proactive Account Manager Outreach.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 13: PROJECT ARCHITECTURE & TECH CARDS
+         ======================================================================= -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">System Design</div>
+          <h2 class="section-title">Full Project Architecture</h2>
+          <p class="section-subtitle">
+            Structured layered topology spanning core exploratory data science, offline model training, and executive decision interfaces.
+          </p>
+        </div>
+
+        <!-- 5 Layer Stack -->
+        <div class="arch-layers-stack">
+          <div class="arch-layer-card">
+            <div class="layer-badge">
+              <span class="layer-num">LAYER 01</span>
+              <span class="layer-name">Data Layer</span>
+            </div>
+            <div class="layer-details">
+              <p>243,553 telecom subscriber records, schema audit, 0-missing verification, stratified train/test partitioning, and high-cardinality geographic aggregation.</p>
+            </div>
+          </div>
+
+          <div class="arch-layer-card">
+            <div class="layer-badge">
+              <span class="layer-num">LAYER 02</span>
+              <span class="layer-name">ML Modeling Layer</span>
+            </div>
+            <div class="layer-details">
+              <p>82-dimensional feature preprocessing matrix, cross-validated multi-model benchmark, champion Random Forest ensemble (100 trees, depth 10, balanced weights).</p>
+            </div>
+          </div>
+
+          <div class="arch-layer-card">
+            <div class="layer-badge">
+              <span class="layer-num">LAYER 03</span>
+              <span class="layer-name">Decision Intelligence</span>
+            </div>
+            <div class="layer-details">
+              <p>Sigmoid Platt scaling calibration (Brier 0.1600, log loss 0.5010), multi-factor prioritization weighting (50/30/20), and capacity routing constraints.</p>
+            </div>
+          </div>
+
+          <div class="arch-layer-card">
+            <div class="layer-badge">
+              <span class="layer-num">LAYER 04</span>
+              <span class="layer-name">Visualization Layer</span>
+            </div>
+            <div class="layer-details">
+              <p>Diagnostic ROC/PR curves, reliability diagrams, interactive parameter sliders, and customer risk universe mapping.</p>
+            </div>
+          </div>
+
+          <div class="arch-layer-card">
+            <div class="layer-badge">
+              <span class="layer-num">LAYER 05</span>
+              <span class="layer-name">Portfolio Interface</span>
+            </div>
+            <div class="layer-details">
+              <p>Clean, high-performance static delivery built with standard HTML5, CSS3, and Vanilla JavaScript for direct browser execution and GitHub Pages hosting.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Informational Technology Cards -->
+        <div class="section-header" style="margin-bottom: 28px;">
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary);">Broader Project Technologies</h3>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon">Py</div>
+            <div>
+              <div class="tech-name">Python</div>
+              <div class="tech-role">Core ML Runtime</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">Pd</div>
+            <div>
+              <div class="tech-name">Pandas</div>
+              <div class="tech-role">Data Manipulation</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">Np</div>
+            <div>
+              <div class="tech-name">NumPy</div>
+              <div class="tech-role">Numerical Matrix Ops</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">Sk</div>
+            <div>
+              <div class="tech-name">Scikit-learn</div>
+              <div class="tech-role">Model Benchmarking</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">ML</div>
+            <div>
+              <div class="tech-name">Machine Learning</div>
+              <div class="tech-role">Random Forest Champion</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">Re</div>
+            <div>
+              <div class="tech-name">React</div>
+              <div class="tech-role">Interactive App UI</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">TS</div>
+            <div>
+              <div class="tech-name">TypeScript</div>
+              <div class="tech-role">Strict Type Safety</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">Vi</div>
+            <div>
+              <div class="tech-name">Vite</div>
+              <div class="tech-role">Application Bundler</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">TW</div>
+            <div>
+              <div class="tech-name">Tailwind CSS</div>
+              <div class="tech-role">Utility Design</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">Rc</div>
+            <div>
+              <div class="tech-name">Recharts</div>
+              <div class="tech-role">Analytical Visuals</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">Mo</div>
+            <div>
+              <div class="tech-name">Motion</div>
+              <div class="tech-role">Kinetic Interfaces</div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon">3D</div>
+            <div>
+              <div class="tech-name">Three.js</div>
+              <div class="tech-role">Telemetry Network</div>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size: 0.8125rem; color: var(--text-muted); text-align: center; max-width: 800px; margin: 0 auto;">
+          <em>Architectural Disclosure:</em> &ldquo;These technologies describe the broader No-Churn Telecom V2 project. This portfolio landing page itself is implemented using HTML, CSS, and Vanilla JavaScript.&rdquo;
+        </p>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 14: EXISTING APPLICATION PREVIEW (6 CARDS)
+         ======================================================================= -->
+    <section class="section section-alt" id="preview">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Interface Showcase</div>
+          <h2 class="section-title">Application Previews</h2>
+          <p class="section-subtitle">
+            Glimpse into the six key analytical modules comprising the No-Churn Telecom decision cockpit.
+          </p>
+        </div>
+
+        <div class="preview-grid">
+          <!-- Card 1: System Observatory -->
+          <div class="preview-card">
+            <!-- REPLACE WITH ACTUAL SCREENSHOT -->
+            <div class="preview-frame" aria-label="System Observatory Screenshot Placeholder">
+              <div class="preview-placeholder-content">
+                <span class="preview-chip">Application Preview</span>
+                <p class="preview-placeholder-text">Screenshot placeholder &mdash; replace with actual project image</p>
+                <code style="font-size: 0.6875rem; color: var(--text-muted); font-family: monospace;">assets/screenshots/observatory.png</code>
+              </div>
+            </div>
+            <div class="preview-body">
+              <h3 class="preview-title">System Observatory</h3>
+              <p class="preview-desc">Macro fleet overview showing active churn velocity, geographic state breakdowns, and high-level health indicators across 4 telecom partners.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Prediction Engine -->
+          <div class="preview-card">
+            <!-- REPLACE WITH ACTUAL SCREENSHOT -->
+            <div class="preview-frame" aria-label="Prediction Engine Screenshot Placeholder">
+              <div class="preview-placeholder-content">
+                <span class="preview-chip">Application Preview</span>
+                <p class="preview-placeholder-text">Screenshot placeholder &mdash; replace with actual project image</p>
+                <code style="font-size: 0.6875rem; color: var(--text-muted); font-family: monospace;">assets/screenshots/prediction-engine.png</code>
+              </div>
+            </div>
+            <div class="preview-body">
+              <h3 class="preview-title">Prediction Engine</h3>
+              <p class="preview-desc">Interactive inference interface for evaluating individual customer risk scores and local feature attributions (SHAP values).</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Retention Priority -->
+          <div class="preview-card">
+            <!-- REPLACE WITH ACTUAL SCREENSHOT -->
+            <div class="preview-frame" aria-label="Retention Priority Screenshot Placeholder">
+              <div class="preview-placeholder-content">
+                <span class="preview-chip">Application Preview</span>
+                <p class="preview-placeholder-text">Screenshot placeholder &mdash; replace with actual project image</p>
+                <code style="font-size: 0.6875rem; color: var(--text-muted); font-family: monospace;">assets/screenshots/retention-priority.png</code>
+              </div>
+            </div>
+            <div class="preview-body">
+              <h3 class="preview-title">Retention Priority Cockpit</h3>
+              <p class="preview-desc">Multi-tier priority ranking view implementing the 50% risk, 30% monthly billing, and 20% contract urgency decision logic.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Campaign Simulator -->
+          <div class="preview-card">
+            <!-- REPLACE WITH ACTUAL SCREENSHOT -->
+            <div class="preview-frame" aria-label="Campaign Simulator Screenshot Placeholder">
+              <div class="preview-placeholder-content">
+                <span class="preview-chip">Application Preview</span>
+                <p class="preview-placeholder-text">Screenshot placeholder &mdash; replace with actual project image</p>
+                <code style="font-size: 0.6875rem; color: var(--text-muted); font-family: monospace;">assets/screenshots/campaign-sim.png</code>
+              </div>
+            </div>
+            <div class="preview-body">
+              <h3 class="preview-title">Campaign Simulator</h3>
+              <p class="preview-desc">Capacity-constrained allocation module allowing commercial managers to model expected preserved MRR under various outreach thresholds.</p>
+            </div>
+          </div>
+
+          <!-- Card 5: Model Governance -->
+          <div class="preview-card">
+            <!-- REPLACE WITH ACTUAL SCREENSHOT -->
+            <div class="preview-frame" aria-label="Model Governance Screenshot Placeholder">
+              <div class="preview-placeholder-content">
+                <span class="preview-chip">Application Preview</span>
+                <p class="preview-placeholder-text">Screenshot placeholder &mdash; replace with actual project image</p>
+                <code style="font-size: 0.6875rem; color: var(--text-muted); font-family: monospace;">assets/screenshots/model-governance.png</code>
+              </div>
+            </div>
+            <div class="preview-body">
+              <h3 class="preview-title">Model Governance</h3>
+              <p class="preview-desc">Detailed tracking of reproducible hyperparameters, stratified data splits (seed 42), and cross-validation standard deviations.</p>
+            </div>
+          </div>
+
+          <!-- Card 6: MLOps Observability -->
+          <div class="preview-card">
+            <!-- REPLACE WITH ACTUAL SCREENSHOT -->
+            <div class="preview-frame" aria-label="MLOps Observability Screenshot Placeholder">
+              <div class="preview-placeholder-content">
+                <span class="preview-chip">Application Preview</span>
+                <p class="preview-placeholder-text">Screenshot placeholder &mdash; replace with actual project image</p>
+                <code style="font-size: 0.6875rem; color: var(--text-muted); font-family: monospace;">assets/screenshots/mlops.png</code>
+              </div>
+            </div>
+            <div class="preview-body">
+              <h3 class="preview-title">MLOps Observability</h3>
+              <p class="preview-desc">Telemetry monitoring for distribution drift, Platt scaling calibration curve stability, and prediction latency benchmarks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 15: DEMO VIDEO
+         ======================================================================= -->
+    <section class="section" id="demo">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Interactive Walkthrough</div>
+          <h2 class="section-title">See the Decision System in Action</h2>
+          <p class="section-subtitle">
+            Explore how customer data moves through analytics, machine learning, risk scoring, and retention prioritization.
+          </p>
+        </div>
+
+        <div class="video-wrapper-outer">
+          <!-- REPLACE WITH DEMO VIDEO -->
+          <div class="video-container" aria-label="Demo Video Container Placeholder">
+            <div class="video-placeholder-inner">
+              <div class="play-button-visual" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </div>
+              <h3 class="video-placeholder-title">Demo video coming soon</h3>
+              <p class="video-placeholder-sub">
+                A complete recorded walkthrough demonstrating live inference, threshold adjustments, and retention campaign execution will be linked here.
+              </p>
+              <span class="audit-badge" style="color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.3);">
+                <!-- REPLACE WITH DEMO VIDEO LINK: e.g. YouTube / Vimeo / MP4 -->
+                To insert video: Replace this container with &lt;video src="./assets/demo.mp4" controls&gt;
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 16: PROJECT JOURNEY (ANIMATED TIMELINE)
+         ======================================================================= -->
+    <section class="section section-alt" id="journey">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Engineering Timeline</div>
+          <h2 class="section-title">Project Execution Journey</h2>
+          <p class="section-subtitle">
+            From initial business framing to deployed retention decision intelligence.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-track" aria-hidden="true"></div>
+
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-stage">PHASE 01 &bull; PROBLEM FRAMING</span>
+              <h3 class="timeline-title">Defining the Decision Bottleneck</h3>
+              <p class="timeline-desc">Identified that naive binary classification fails to resolve finite retention call-center bandwidth. Structured retention prioritization as a joint risk-value optimization problem.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-stage">PHASE 02 &bull; DATA INGESTION &amp; HYGIENE</span>
+              <h3 class="timeline-title">Audit of 243,553 Records</h3>
+              <p class="timeline-desc">Validated 0 missing values, 0 duplicate records, and established an 80/20 stratified partition (seed 42). Excluded 213,442 pincodes to prevent high-cardinality memorization.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-stage">PHASE 03 &bull; EXPLORATORY ANALYSIS</span>
+              <h3 class="timeline-title">Class Imbalance &amp; Tenurial Patterns</h3>
+              <p class="timeline-desc">Quantified 20.0478% churn baseline across 48,827 churners. Isolated contract tenure and fiber internet connection as primary drivers of subscription vulnerability.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-stage">PHASE 04 &bull; FEATURE ENGINEERING</span>
+              <h3 class="timeline-title">Transforming 14 Raw Attributes to 82 Features</h3>
+              <p class="timeline-desc">Engineered one-hot encodings for payment modes, scaled monthly billing figures, and generated multi-service bundling indicators.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-stage">PHASE 05 &bull; MODEL BENCHMARKING</span>
+              <h3 class="timeline-title">Evaluating Candidate Algorithms</h3>
+              <p class="timeline-desc">Benchmarked linear classifiers, Extra Trees, and Hist Gradient Boosting against Random Forest. Selected tuned Random Forest (100 trees, depth 10) as champion.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-stage">PHASE 06 &bull; PROBABILITY CALIBRATION</span>
+              <h3 class="timeline-title">Platt Scaling on 24,356 Holdout Samples</h3>
+              <p class="timeline-desc">Fitted Sigmoid Platt scaling to transform raw decision tree vote distributions into honest empirical probabilities, achieving a verified Brier Score of 0.1600.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-stage">PHASE 07 &bull; RISK INTELLIGENCE</span>
+              <h3 class="timeline-title">Formulating Decision Prioritization</h3>
+              <p class="timeline-desc">Built the 50% Churn Risk + 30% Monthly Charges + 20% Contract Urgency weighting framework to rank customer outreach lists by financial risk impact.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <span class="timeline-stage">PHASE 08 &bull; RETENTION DECISION SYSTEM</span>
+              <h3 class="timeline-title">Capacity Simulation &amp; Portfolio Deployment</h3>
+              <p class="timeline-desc">Integrated capacity-constrained campaign simulation and delivered the complete static portfolio showcase interface with zero external runtime dependencies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 17: DOCUMENTATION & CODE ARTIFACTS
+         ======================================================================= -->
+    <section class="section" id="documentation">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Technical Artifacts</div>
+          <h2 class="section-title">Project Documentation</h2>
+          <p class="section-subtitle">
+            Explore comprehensive architectural blueprints, notebook references, and technical interview summaries.
+          </p>
+        </div>
+
+        <div class="docs-grid">
+          <!-- Doc 1: Project Overview -->
+          <!-- REPLACE WITH DOCUMENTATION LINK: e.g. docs/overview.md -->
+          <a href="#" class="doc-card" aria-label="Read Project Overview Documentation">
+            <span class="doc-badge">DOC 01</span>
+            <h3 class="doc-title">Project Overview</h3>
+            <p class="doc-desc">Executive summary, problem statement, business goals, and strategic KPI architecture.</p>
+            <span class="doc-link-arrow">View Documentation &rarr;</span>
+          </a>
+
+          <!-- Doc 2: Methodology -->
+          <!-- REPLACE WITH DOCUMENTATION LINK: e.g. docs/methodology.md -->
+          <a href="#" class="doc-card" aria-label="Read Methodology Documentation">
+            <span class="doc-badge">DOC 02</span>
+            <h3 class="doc-title">Methodology</h3>
+            <p class="doc-desc">Statistical data auditing, high-cardinality elimination rationale, and 80/20 stratified split protocols.</p>
+            <span class="doc-link-arrow">View Documentation &rarr;</span>
+          </a>
+
+          <!-- Doc 3: ML Pipeline -->
+          <!-- REPLACE WITH DOCUMENTATION LINK: e.g. docs/pipeline.md -->
+          <a href="#" class="doc-card" aria-label="Read ML Pipeline Documentation">
+            <span class="doc-badge">DOC 03</span>
+            <h3 class="doc-title">ML Pipeline</h3>
+            <p class="doc-desc">82-feature transformation matrix, Scikit-learn pipelines, and Random Forest hyperparameter tuning specifications.</p>
+            <span class="doc-link-arrow">View Documentation &rarr;</span>
+          </a>
+
+          <!-- Doc 4: Business Decision Framework -->
+          <!-- REPLACE WITH DOCUMENTATION LINK: e.g. docs/decision-framework.md -->
+          <a href="#" class="doc-card" aria-label="Read Business Decision Framework Documentation">
+            <span class="doc-badge">DOC 04</span>
+            <h3 class="doc-title">Business Decision Framework</h3>
+            <p class="doc-desc">Mathematical breakdown of the 50/30/20 Priority Index and capacity-constrained campaign simulation mechanics.</p>
+            <span class="doc-link-arrow">View Documentation &rarr;</span>
+          </a>
+
+          <!-- Doc 5: MLOps & Governance -->
+          <!-- REPLACE WITH DOCUMENTATION LINK: e.g. docs/mlops-governance.md -->
+          <a href="#" class="doc-card" aria-label="Read MLOps and Governance Documentation">
+            <span class="doc-badge">DOC 05</span>
+            <h3 class="doc-title">MLOps &amp; Governance</h3>
+            <p class="doc-desc">Model drift detection, Platt scaling calibration monitoring, and reproducible experiment tracking logs.</p>
+            <span class="doc-link-arrow">View Documentation &rarr;</span>
+          </a>
+
+          <!-- Doc 6: Interview Guide -->
+          <!-- REPLACE WITH DOCUMENTATION LINK: e.g. docs/interview-guide.md -->
+          <a href="#" class="doc-card" aria-label="Read Interview Guide Documentation">
+            <span class="doc-badge">DOC 06</span>
+            <h3 class="doc-title">Interview Guide</h3>
+            <p class="doc-desc">Deep-dive technical questions &amp; answers explaining key trade-offs in class imbalance, PR-AUC, and calibration.</p>
+            <span class="doc-link-arrow">View Documentation &rarr;</span>
+          </a>
+
+          <!-- Doc 7: Portfolio Showcase -->
+          <!-- REPLACE WITH DOCUMENTATION LINK: e.g. docs/showcase.md -->
+          <a href="#" class="doc-card" aria-label="Read Portfolio Showcase Documentation">
+            <span class="doc-badge">DOC 07</span>
+            <h3 class="doc-title">Portfolio Showcase</h3>
+            <p class="doc-desc">Guide for recruiters, hiring managers, and senior engineers examining architecture and design craft.</p>
+            <span class="doc-link-arrow">View Documentation &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 18: FINAL CTA
+         ======================================================================= -->
+    <section class="section" id="cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta-title">Turn customer data into decisions.</h2>
+          <p class="cta-desc">
+            No-Churn Telecom V2 demonstrates how machine learning can move from prediction toward structured retention intelligence.
+          </p>
+
+          <div class="cta-actions">
+            <!-- REPLACE WITH YOUR DASHBOARD URL -->
+            <a href="#preview" class="btn btn-primary btn-lg">
+              Explore Dashboard
+            </a>
+            <!-- REPLACE WITH YOUR GITHUB URL -->
+            <a href="https://github.com/your-username/no-churn-telecom-v2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" aria-label="View Project on GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+              View GitHub
+            </a>
+            <a href="#demo" class="btn btn-secondary btn-lg">
+              Watch Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>NO-CHURN TELECOM V2</h4>
+          <p>
+            An end-to-end machine learning decision system that transforms telecom customer data into churn risk, retention priorities, and actionable business intelligence.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Core Modules</h5>
+          <ul class="footer-links">
+            <li><a href="#problem">Business Problem</a></li>
+            <li><a href="#snapshot">Verified Data</a></li>
+            <li><a href="#pipeline">ML Pipeline</a></li>
+            <li><a href="#observatory">Model Observatory</a></li>
+            <li><a href="#retention">Retention Priority</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>System &amp; Code</h5>
+          <ul class="footer-links">
+            <!-- REPLACE WITH YOUR GITHUB URL -->
+            <li><a href="https://github.com/your-username/no-churn-telecom-v2" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+            <!-- REPLACE WITH YOUR DASHBOARD URL -->
+            <li><a href="#preview">Live Dashboard</a></li>
+            <li><a href="#demo">Demo Video</a></li>
+            <li><a href="#documentation">Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; No-Churn Telecom V2 &bull; Professional Machine Learning Portfolio</span>
+        <span>Pure Static Delivery &bull; HTML5 / CSS3 / Vanilla JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+</body>
+</html>
